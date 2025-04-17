@@ -1,3 +1,5 @@
+import randomNumberGenerator
+
 def merge(arr, left, mid , right):
     n1 = mid - left + 1 
     n2 = right - mid 
@@ -48,11 +50,14 @@ def mergeSort(arr, left, right):
 
 # Driver code
 if __name__ == "__main__":
-    unsortedArray = [3,1,6,8,4,5,7,2]
+
+    array_length, maxVal, minVal = randomNumberGenerator.userInput()
+    unsortedArray = randomNumberGenerator.generateRandomNums(array_length, maxVal, minVal)
+
     print('Unsorted array: ',unsortedArray)
 
     # Sort - merge sort
-    n = len(unsortedArray)
+    n = array_length
     left, right = 0, n-1
     mergeSort(unsortedArray, left, right)
     print('Sorted array: ',unsortedArray)

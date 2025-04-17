@@ -1,12 +1,7 @@
-import random
+import randomNumberGenerator 
 
-def generateRandomNums(n, maxNum, minNum):
-    return [random.randint(minNum, maxNum) for i in range(n)]
-
-array_length = int(input('Input the length of array: ' ))
-maxVal = 20
-minVal = 1
-arr = generateRandomNums(array_length, maxVal, minVal)
+array_length, maxVal, minVal = randomNumberGenerator.userInput()
+arr = randomNumberGenerator.generateRandomNums(array_length, maxVal, minVal)
 
 
 def bubbleSort(arr):
